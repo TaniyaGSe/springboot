@@ -10,18 +10,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-//@Table(name="userr1")
+//@Table(name="Employee")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class UserTable {
 
     @Id
-    @Column
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column//@Column(name = "ID")
     private int id;
     @Column
     private String name;
+//    @Column
+//    private String lastName;
     @Column
-    private String address;
+    private String email;
+    @Column
+    private String phoneN;
+    @Column
+    private String password;
 
 }

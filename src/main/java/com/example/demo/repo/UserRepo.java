@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface UserRepo extends JpaRepository<UserTable,Integer> {
 
-    @Query(value = "select * from UserTable where id = ?1", nativeQuery = true)
-    UserTable getUserByUserId(String usersID);
+//    @Query(value = "select * from UserTable where id = ?1", nativeQuery = true)
+//    UserTable getUserByUserId(String usersID);
 
 //    @Query(value = "select * from UserTable where id = ?1 and address=?2", nativeQuery = true)
 //    UserTable getUserByUserIdAndAddress(String usersID,String address);

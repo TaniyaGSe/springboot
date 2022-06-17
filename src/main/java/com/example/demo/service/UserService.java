@@ -29,7 +29,6 @@ public class UserService {
     public List<UserDTO> getAllUsers(){
         List<UserTable>userList=userRepo.findAll(); //Find all data from the repo and save it in userList in UserTable type
         return modelMapper.map(userList, new TypeToken<List<UserDTO>>(){}.getType());
-
     }
 
     public UserDTO updateUser(UserDTO userDTO){
@@ -43,10 +42,10 @@ public class UserService {
     }
 
     //select * from UserTable where id = 2
-    public UserDTO getUserByUserId(String usersID){
-        UserTable userTable = userRepo.getUserByUserId(usersID);
-        return modelMapper.map(userTable,UserDTO.class);
-    }
+//    public UserDTO getUserByUserId(String usersID){
+//        UserTable userTable = userRepo.getUserByUserId(usersID);
+//        return modelMapper.map(userTable,UserDTO.class);
+//    }
 
     //select * from UserTable where id = 2 and address = "Kandy"
 //    public UserDTO getUserByUserIdAndAddress(String usersID,String address){
